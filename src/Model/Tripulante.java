@@ -15,6 +15,7 @@ public class Tripulante {
     private float numeroIdentificacion;
     private String email;
 
+
     /** getters*/
     public int getId() {
         return id;
@@ -87,7 +88,7 @@ public class Tripulante {
         }
         else {
             return nota3;
-        }
+        }//si alguno de los condicionales ejecuta el return entonces, sera la ultima linea que se ejecuta dentro del metodo
     }
     
     public boolean checkIfPass() {
