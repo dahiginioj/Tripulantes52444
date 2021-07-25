@@ -31,6 +31,7 @@ public class Curso {
     }
     public Formador getFormador() {
         return formador;
-    }
+    }//corregir
+    
     
 }

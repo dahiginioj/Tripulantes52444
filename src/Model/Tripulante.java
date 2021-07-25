@@ -96,7 +96,7 @@ public class Tripulante {
             return true;
         }
         return false;
-    }
+    }//corregir
     
 
 }

@@ -22,5 +22,7 @@ public class Vista {
         // System.out.println(cursoItaliana.getCodigo());
         // System.out.println(cursoItaliana.getCodigo());
         // System.out.println(cursoFrances.getFormador());
+        //corregir
+        
     }
 }
