@@ -15,6 +15,6 @@ public class Formador {
     
     public String getNombre() {
         return nombre;
-    }//corregir 
+    }
 
 }

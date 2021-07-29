@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.ArrayList;
 
 /**
  * Curso
@@ -11,15 +12,25 @@ public class Curso {
 
     private Formador formador;
 
+    private ArrayList<Tripulante> tripulantes;
+
     public Curso(int pCodigo, String pNombre, char pJornada, int fCodigo, String fNombre) {
         super();
         this.codigo=pCodigo;
         this.nombre=pNombre;
         this.jornada=pJornada;
         formador = new Formador(fNombre, fCodigo);
+        tripulantes = new ArrayList<>();
+    }
+
+    public ArrayList<Tripulante> getTripulantes() {
+        return tripulantes;
     }
     
-
+    public String agregarTripulante(Tripulante t) {
+        tripulantes.add(t);
+        return "Tripulante agregado al curso " + nombre;
+    }
     public int getCodigo() {
         return codigo;
     }
@@ -31,7 +42,7 @@ public class Curso {
     }
     public Formador getFormador() {
         return formador;
-    }//corregir
+    }
     
     
 }
