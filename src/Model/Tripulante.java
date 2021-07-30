@@ -2,7 +2,13 @@ package Model;
 /**
  * Tripulante
  */
+
+import java.util.ArrayList;
+
 public class Tripulante {
+
+    public final static double NOTA_MAXIMA= 5.0;
+
     /**
      * Atributos
      */
@@ -15,8 +21,35 @@ public class Tripulante {
     private float numeroIdentificacion;
     private String email;
 
+    private ArrayList<Curso> cursos;
+
+    public Tripulante() {
+        super();
+    }
+
+    public Tripulante(String tNombre, int id, double nota1, double nota2, double nota3, float numeroIdent, String email) {
+        super();
+        this.nombre=tNombre;
+        this.id=id;
+        this.nota1=nota1;
+        this.nota2=nota2;
+        this.nota3=nota3;
+        this.numeroIdentificacion=numeroIdent;
+        this.email=email;
+        cursos=new ArrayList<>();
+    }
+
 
     /** getters*/
+    public ArrayList<Curso> getCursos() {
+        return cursos;
+    }
+
+    public String agregarCurso(Curso c) {
+        cursos.add(c);
+        return "Curso agregado al tripulante "+ nombre;
+    }
+
     public int getId() {
         return id;
     }
@@ -71,9 +104,9 @@ public class Tripulante {
     
     public double getHighNote() {
 
-        if (nota1>=nota2 && nota1>=nota3) {
+        if (nota1>=nota2 && nota1>=nota3 && nota1<=NOTA_MAXIMA) {
            return nota1;
-        } else if (nota2>=nota3) {
+        } else if (nota2>=nota3 && nota2<=NOTA_MAXIMA) {
             return nota2;
         } else {
             return nota3;
